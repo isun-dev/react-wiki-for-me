@@ -12,3 +12,5 @@
 - DOM 관리와 상태 변화 관리를 최소화가 목적
 - 컴포넌트로 UI를 구성.
 - 컴포넌트는 일종의 뷰 단위.
+
+- https://velog.io/@chaerin00/React-%EC%9D%98-%EC%9D%98%EB%AF%B8
