@@ -6,3 +6,5 @@
 
 ## Simple Passport Local Authentication w/ React & Node.js
 - https://www.youtube.com/watch?v=IUw_TgRhTBE
+
+- https://www.zerocho.com/category/NodeJS/post/57b7101ecfbef617003bf457
