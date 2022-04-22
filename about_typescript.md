@@ -7,3 +7,12 @@
 
 3. 타입스크립트 핸드북
 - https://dev-dain.tistory.com/116
+
+4. TypeScript Deep Dive
+- https://radlohead.gitbook.io/typescript-deep-dive/
+
+5. 타입스크립트 핸드북
+- https://joshua1988.github.io/ts/
+
+6. 5분안에 보는 타입스크립트
+- https://typescript-kr.github.io/
