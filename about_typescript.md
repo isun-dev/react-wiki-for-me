@@ -4,3 +4,6 @@
 
 2. 한눈에 보는 타입스크립트
 - https://heropy.blog/2020/01/27/typescript/
+
+3. 타입스크립트 핸드북
+- https://dev-dain.tistory.com/116
