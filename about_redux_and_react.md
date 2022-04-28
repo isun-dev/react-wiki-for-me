@@ -98,4 +98,14 @@ console.log(store.getState())
 - Reducers act like event listeners, and when they hear an action they are interested in, they update the state in response.
 
 ### Selectors
-- 
+- Selectors는 저장 상태 값에서 특정 정보를 추출하는 방법을 아는 함수. 
+- 응용프로그램이 커짐에 따라, 응용프로그램의 다른 부분이 동일한 데이터를 읽어야 하기 때문에 반복 논리를 피할 수 있다.
+
+# 전반적으로 Redux의 설계 의도를 세 가지 핵심 개념으로 요약할 수 있다.
+- Single Source of Truth: 응용 프로그램의 전역 상태는 단일 저장소 내에 개체로 저장됩니다. 주어진 데이터 조각은 여러 장소에서 복제되는 것이 아니라 한 위치에만 존재해야 한다.
+- State is Read-Only: 
+
+## Redux Application Data Flow
+- https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow#redux-application-data-flow
+- 초기 설정
+1. 
