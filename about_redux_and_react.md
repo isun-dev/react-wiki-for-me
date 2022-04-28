@@ -31,3 +31,20 @@ const addTodoAction = {
 4. reducers 함수 내부의 로직은 일반적으로 동일한 일련의 단계를 따릅니다.
 (1) reducer가 이 동작을 신경쓰는지 확인한다(즉 state변경과 관련된 내용이 있다면, 그리고 그 액션 타입과 관련된 내용이 있다면) => If so, make a copy of the state, update the copy with new values, and return it
 (2) 그렇지 않다면, return the existing state unchanged
+```javascript
+const initialState = { value: 0 }
+
+function counterReducer(state = initialState, action) {
+  // Check to see if the reducer cares about this action
+  if (action.type === 'counter/incremented') {
+    // If so, make a copy of `state`
+    return {
+      ...state,
+      // and update the copy with the new value
+      value: state.value + 1
+    }
+  }
+  // otherwise return the existing state unchanged
+  return state
+}
+```
