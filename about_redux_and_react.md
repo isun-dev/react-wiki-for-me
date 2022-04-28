@@ -21,7 +21,7 @@ const addTodoAction = {
   payload: 'Buy milk'
 }
 ```
-### Reducers
+### Reducers == state값 변경해주는 일종의 함수, 장치
 - 일종의 함수이고, current state와 action object를 받는다. state를 어떻게 업데이트 할지를 결정하고 업데이트를 한 후, new state를 return 한다.
 - reducer는 수신된 작업(이벤트) 유형을 기준으로 이벤트를 처리하는 이벤트 수신기(event listener)로 간주할 수 있다.
 - reducers는 아래 규칙을 반드시 따라야 한다.
@@ -75,3 +75,15 @@ console.log(sumWithInitial);
 ```
 - A Redux reducer function is exactly the same idea as this "reduce callback" function! It takes a "previous result" (the state), and the "current item" (the action object), decides a new state value based on those arguments, and returns that new state.
 - reducer과 reduce()의 차이점은 Array.reduce()의 경우 이 작업이 한 번에 수행되고 Redux의 경우 실행 중인 앱의 수명(lifetime) 동안 수행된다는 것이다.
+
+### Store(reducer와는 짝꿍, store는 객체)
+- 현재 Redux 응용 프로그램 state는 store라는 object에 lives하고 있다.
+- store는 reducer를 전달하여 생성되며 현재 상태 값을 반환하는 getState라는 메서드가 있다.
+```javascript
+import { configureStore } from '@reduxjs/toolkit'
+
+const store = configureStore({ reducer: counterReducer }) // The store is created by passing in a reducer, 
+
+console.log(store.getState())
+// {value: 0}
+```
