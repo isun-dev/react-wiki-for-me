@@ -48,3 +48,30 @@ function counterReducer(state = initialState, action) {
   return state
 }
 ```
+- 왜 Reducer라고 불리나?
+1. 이걸 이해하기 위해서는 자바스크립트의 Array.reduce()를 잘 이해해야 한다.
+2. reduce() 메서드는 배열의 각 요소에 대해 주어진 리듀서(reducer) 함수를 실행하고, 하나의 결과값을 반환한다.
+3. 리듀서 함수는 네 개의 인자를 가집니다.
+- 누산기 (acc)
+- 현재 값 (cur)
+- 현재 인덱스 (idx)
+- 원본 배열 (src)
+- 리듀서 함수의 반환 값은 누산기에 할당되고, 누산기는 순회 중 유지되므로 결국 최종 결과는 하나의 값이 된다.
+- arr.reduce(callback[, initialValue])
+- https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
+```javascript
+const array1 = [1, 2, 3, 4];
+
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array1.reduce(
+  (previousValue, currentValue) => previousValue + currentValue,
+  initialValue
+);
+
+console.log(sumWithInitial);
+// expected output: 10
+
+```
+- A Redux reducer function is exactly the same idea as this "reduce callback" function! It takes a "previous result" (the state), and the "current item" (the action object), decides a new state value based on those arguments, and returns that new state.
+- reducer과 reduce()의 차이점은 Array.reduce()의 경우 이 작업이 한 번에 수행되고 Redux의 경우 실행 중인 앱의 수명(lifetime) 동안 수행된다는 것이다.
