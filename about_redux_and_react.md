@@ -8,6 +8,8 @@
 - In order to update values immutably, your code must make copies of existing objects/arrays, and then modify the copies.
 - We can do this by hand using JavaScript's array / object spread operators, as well as array methods that return new copies of the array instead of mutating the original array
 
+# Reducer는 act like Event Listener, dispatch는 act like trigger.
+
 ## 리덕스 전문용어(처음에는 독립적인 개념으로 이해하는것이 사용하기 쉽게 느껴짐)
 ### Actions == 발생하는 이벤트에 대한 설명
 - type 필드를 가진 순수 자바스크립트 객체이다. 
@@ -88,4 +90,12 @@ console.log(store.getState())
 // {value: 0}
 ```
 
-### Dispatch
+### Dispatch(reducer와의 연결고리, call dispatch to update the state) => Something happened, and we want the store to know about it
+- store는 dispatch라는 메소드가 있다.
+- state를 업데이트 하기 위해서는 store.dispatch()만 사용할 수 있다. (The only way to update the state is to call store.dispatch() and pass in an action object)
+- The store will run its reducer function and save the new state value inside, and we can call getState() to retrieve the updated value.
+- You can think of dispatching actions as "triggering an event" 
+- Reducers act like event listeners, and when they hear an action they are interested in, they update the state in response.
+
+### Selectors
+- 
