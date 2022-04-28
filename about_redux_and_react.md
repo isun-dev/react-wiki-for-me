@@ -76,7 +76,7 @@ console.log(sumWithInitial);
 - A Redux reducer function is exactly the same idea as this "reduce callback" function! It takes a "previous result" (the state), and the "current item" (the action object), decides a new state value based on those arguments, and returns that new state.
 - reducer과 reduce()의 차이점은 Array.reduce()의 경우 이 작업이 한 번에 수행되고 Redux의 경우 실행 중인 앱의 수명(lifetime) 동안 수행된다는 것이다.
 
-### Store(reducer와는 짝꿍, store는 객체)
+### Store(reducer와는 짝꿍, store는 객체, 일종의 저장소)
 - 현재 Redux 응용 프로그램 state는 store라는 object에 lives하고 있다.
 - store는 reducer를 전달하여 생성되며 현재 상태 값을 반환하는 getState라는 메서드가 있다.
 ```javascript
@@ -87,3 +87,5 @@ const store = configureStore({ reducer: counterReducer }) // The store is create
 console.log(store.getState())
 // {value: 0}
 ```
+
+### Dispatch
